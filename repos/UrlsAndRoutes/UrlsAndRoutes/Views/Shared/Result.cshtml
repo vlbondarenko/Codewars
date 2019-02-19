@@ -1,0 +1,24 @@
+﻿@model Result
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Routing</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="panel-body">
+    <table class="table table-bordered table-striped table-condensed">
+        <tr><th>Controller:</th><th>@Model.Controller</th></tr>
+        <tr><th>Action:</th><th>@Model.Action</th></tr>
+        @foreach(string key in Model.Data.Keys){ 
+            <tr><th>@key</th><th>@Model.Data[key]</th></tr>
+        }
+    </table>
+</body>
+</html>
+
+
+

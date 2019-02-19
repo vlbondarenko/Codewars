@@ -1,0 +1,21 @@
+﻿@model Dictionary<string,string>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css"/>
+    <title>Result</title>
+</head>
+<body class="panel-body">
+    <table class="table table-condensed table-boedered table-striped">
+        @foreach(var kvp in Model)
+        {
+            <tr><th>@kvp.Key</th><th>@kvp.Value</th></tr>
+        }
+    </table>
+</body>
+</html>

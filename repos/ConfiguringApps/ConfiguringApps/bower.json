@@ -1,0 +1,17 @@
+{
+  "name": "ConfiguringApps",
+  "description": "",
+  "main": "bower.json",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v3.3.6"
+  }
+}

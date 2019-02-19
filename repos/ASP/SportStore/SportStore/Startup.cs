@@ -37,7 +37,7 @@ namespace SportStore
             services.AddSession();
         }
 
-
+        //'nj rjvvtynfhbq
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory factory)
         {
 

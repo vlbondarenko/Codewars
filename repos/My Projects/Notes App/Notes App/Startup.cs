@@ -27,7 +27,7 @@ namespace Notes_App
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello Pidordddооhhhh");
+                await context.Response.WriteAsync("Hello World");
             });
         }
     }

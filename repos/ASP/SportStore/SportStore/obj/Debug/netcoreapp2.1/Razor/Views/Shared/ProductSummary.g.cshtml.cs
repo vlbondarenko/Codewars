@@ -84,12 +84,12 @@ using SportStore.Infrastructure;
             WriteLiteral("\r\n        </span>\r\n    </h3>\r\n    ");
             EndContext();
             BeginContext(213, 501, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c74d7f97bfb41708de81f581f4f0daa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31bd7040d0124cffbc2c1ecfbe6e39cc", async() => {
                 BeginContext(311, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(321, 43, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a2afa39bfa774abeaee33a9f0585777f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4e3d60da5a654caf8fbbf0e994499275", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();

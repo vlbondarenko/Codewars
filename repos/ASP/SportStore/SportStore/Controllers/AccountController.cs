@@ -28,7 +28,7 @@ namespace SportStore.Controllers
         {
             return View(new LoginModel { ReturnUrl = returnUrl });
         }
-
+       
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]

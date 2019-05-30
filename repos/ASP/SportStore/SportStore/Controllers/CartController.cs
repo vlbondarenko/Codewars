@@ -28,12 +28,15 @@ namespace SportStore.Controllers
 
         public RedirectToActionResult AddToCard(int productID, string returnUrl, int quantity)
         {
+           
             Product product = productRepository.Products.FirstOrDefault(p=>p.ProductID==productID);
             if (product != null)
             {
                 cart.AddItem(product, 1);
             }
             return RedirectToAction("Index", new { returnUrl });
+
+          
         }
 
         public RedirectToActionResult RemoveFromCart(int ProductID,string returnUrl)

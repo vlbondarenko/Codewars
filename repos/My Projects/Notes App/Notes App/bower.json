@@ -1,0 +1,21 @@
+{
+  "name": "Notes App",
+  "private": true,
+  "authors": [
+    "Marf <marffianin@gmail.com>"
+  ],
+  "description": "",
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+
+  "dependencies": {
+    "bootstrap": "3.3.6"
+  }
+}

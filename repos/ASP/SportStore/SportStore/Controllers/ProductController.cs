@@ -19,14 +19,16 @@ namespace SportStore.Controllers
             repository = repo;
         }
 
-        public IActionResult List(string category, int page=1) =>View(new ProductListViewPage
-        {
-            Products = repository.Products.Where(p=>category==null||p.Category==category).OrderBy(p => p.ProductID).Skip((page - 1) * PageSize).Take(PageSize),
-
-            PagingInfo = new PagingInfo {
-                CurrentPage = page, ItemPerPage = PageSize,
-                TotalItem =category==null?repository.Products.Count():repository.Products.Where(e=>e.Category==category).Count()},
+        public IActionResult List(string category, int page=1) => View(
+            new ProductListViewPage {
+                Products = repository.Products.Where(p=>category==null||p.Category==category)
+                    .OrderBy(p => p.ProductID)
+                    .Skip((page - 1) * PageSize).Take(PageSize),
+                PagingInfo = new PagingInfo {
+                    CurrentPage = page, ItemPerPage = PageSize,
+                    TotalItem =category==null?repository.Products.Count():repository.Products.Where(e=>e.Category==category).Count()
+                },
                 CurrentCategory = category
-        });
+            });
     }
 }

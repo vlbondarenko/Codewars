@@ -63,7 +63,7 @@ using SportStore.Infrastructure;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(30, 120, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64ef70cfe5174daea3cb44f5d6feb417", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a29d6db7019a487ba3e2862f8f9f83c1", async() => {
                 BeginContext(142, 4, true);
                 WriteLiteral("Home");
                 EndContext();
@@ -103,7 +103,7 @@ using SportStore.Infrastructure;
             WriteLiteral("    ");
             EndContext();
             BeginContext(198, 225, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2714cb2de904c34ae18551510b3d0d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "757ba956ad59465b9e2d2d775d98388b", async() => {
                 BeginContext(411, 8, false);
 #line 14 "C:\Users\VIP\source\repos\ASP\SportStore\SportStore\Views\Shared\Components\NavigationMenu\Default.cshtml"
                    Write(category);

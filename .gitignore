@@ -1,4 +1,4 @@
-﻿
+
 *.com
 *.class
 *.dll
@@ -59,3 +59,7 @@ _[Ss]cripts
 *.ncrunchsolution
 *.dot[Cc]over
 repos/My Projects/Notes App/.vs/
+*.ide
+*.ide-shm
+*.ide-wal
+repos/ASP/UrlsAndRoutes/

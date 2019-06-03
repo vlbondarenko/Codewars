@@ -86,7 +86,7 @@ Write(Html.Partial("ProductSummary",p));
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(117, 316, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30f7ea107b9746fc8fe38ddb21c6b01e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19c9f3495bed468a850eaa7a1400a220", async() => {
             }
             );
             __SportStore_Infrastructure_PageLinkTagHelper = CreateTagHelper<global::SportStore.Infrastructure.PageLinkTagHelper>();

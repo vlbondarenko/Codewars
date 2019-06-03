@@ -63,3 +63,6 @@ repos/My Projects/Notes App/.vs/
 *.ide-shm
 *.ide-wal
 repos/ASP/UrlsAndRoutes/
+repos/ASP/SportStore/SportStore/.vs/
+repos/ASP/SportStore/SportStore/bin/
+repos/ASP/SportStore/SportStore/obj/

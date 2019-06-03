@@ -109,7 +109,7 @@ using SportStore.Infrastructure;
             WriteLiteral("</td><th>Product</th><th>Quantity</th>\r\n        <td>\r\n            ");
             EndContext();
             BeginContext(420, 264, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b94f30f24034d8ea2bf6310ee10e083", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e4d18eb7bba4c8db9edacf5c435b0ab", async() => {
                 BeginContext(465, 53, true);
                 WriteLiteral("\r\n                <input type=\"hidden\" name=\"orderId\"");
                 EndContext();

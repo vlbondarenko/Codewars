@@ -26,7 +26,7 @@ namespace SportStore.Controllers
             return View(new CartIndexViewModel { Cart = cart, ReturnUrl = returnUrl });
         }
 
-        public RedirectToActionResult AddToCard(int productID, string returnUrl, int quantity)
+        public RedirectToActionResult AddToCard(int productID, string returnUrl,int quantity=1)
         {
            
             Product product = productRepository.Products.FirstOrDefault(p=>p.ProductID==productID);

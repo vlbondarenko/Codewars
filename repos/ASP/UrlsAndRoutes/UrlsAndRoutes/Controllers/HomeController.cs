@@ -12,6 +12,9 @@ namespace UrlsAndRoutes.Controllers
         public ViewResult Index() => View("Result",
             new Result { Controller = nameof(HomeController), Action = nameof(Index) });
 
+
+        //Через URL можно передавать значения в методы действия, но только в том случае, 
+        //если имя параметра мтода совпадает с названием переменной шаблона URL
         public ViewResult CustomVariable(string id,string catchall)
         {
             Result r = new Result

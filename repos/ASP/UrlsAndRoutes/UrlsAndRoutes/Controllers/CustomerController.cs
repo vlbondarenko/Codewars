@@ -11,8 +11,10 @@ namespace UrlsAndRoutes.Controllers
     {
         
 
-        public ViewResult Index() => View("Result", new Result { Controller = nameof(CustomerController), Action = nameof(Index) });
+        public ViewResult Index() => View("Result", 
+            new Result { Controller = nameof(CustomerController), Action = nameof(Index) });
 
-        public ViewResult List() => View("Result", new Result { Controller = nameof(CustomerController), Action = nameof(List) });
+        public ViewResult List() => View("Result", 
+            new Result { Controller = nameof(CustomerController), Action = nameof(List) });
     }
 }

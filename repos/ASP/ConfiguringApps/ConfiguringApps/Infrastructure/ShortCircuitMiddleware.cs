@@ -17,9 +17,9 @@ namespace ConfiguringApps.Infrastructure
 
         public async Task Invoke(HttpContext httpContext)
         {
-            if (httpContext.Items["EdgeBrowser"] as bool?==true)
+            if (httpContext.Items["EdgeBrowser"] as bool?==true)        //если пользователь открыываетстраницу в браузере Edge
             {
-                httpContext.Response.StatusCode = 403;
+                httpContext.Response.StatusCode = 403;                  //то будет возвращена ошибка 403, запрос следующему компоненту отдан не будет
             }
             else
             {

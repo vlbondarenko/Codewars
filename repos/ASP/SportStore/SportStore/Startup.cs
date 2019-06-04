@@ -19,8 +19,11 @@ namespace SportStore
     public class Startup
     {
         IConfigurationRoot Configuration;
+        //Интерфейс IHostingEnvirorunent предоставляет базовую - 
+        //но важную - информацию о среде размещения. в которой функционирует приложение
         public Startup(IHostingEnvironment env)
         {
+            //ContentRootPath - Это свойство возвращает путь, по которому находятся файлы содержимого и конфигурации приложения 
             Configuration = new ConfigurationBuilder().SetBasePath(env.ContentRootPath).AddJsonFile("appsettings.json").Build();
         }
         public void ConfigureServices(IServiceCollection services)
@@ -37,7 +40,7 @@ namespace SportStore
             services.AddSession();
         }
 
-        //'nj rjvvtynfhbq
+        
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory factory)
         {
 

@@ -16,6 +16,8 @@ namespace ConfiguringApps.Infrastructure
             nextDelegate = @delegate;
         }
 
+        //метод сразу передает запрос следующему компоненту в цепочке. Но при генерации ответа и прохождении его обратно по цепочке, этот метод 
+        //будет его редактировать, выдавая вместо ошибок текстовые сообщения
         public async Task Invoke(HttpContext httpContext)
         {
             await nextDelegate.Invoke(httpContext);

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<string>
+<div class="bg-info">
+    <div>This is the message from the partial view.</div>
+    <ul>
+        @foreach (string str in Model)
+        {
+            <li>@str</li>
+        }
+    </ul>
+    <a asp-action="Index">This is the link to the Index action</a>
+</div>

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication;
 
 
 namespace SportStore
@@ -48,7 +49,7 @@ namespace SportStore
             app.UseStaticFiles();
             app.UseStatusCodePages();
             app.UseSession();
-            app.UseIdentity();
+            app.UseAuthentication();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: null,

@@ -1,0 +1,29 @@
+﻿<!--Спомощью следующей строки, представление строго типизируется. Предсавление ожидает модель данного типа-->
+@model DateTime
+@{ Layout = null; }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Controllers And Actions</title>
+    <link rel="stylesheet" asp-href-include="liЬ/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="panel-body">
+
+
+    <!--        
+        Использование свойств динамического объекта ViewBag для передачи данных в представление-->
+    <p>The day is: @ViewBag.Date.DayOfWeek</p>
+    <p>The message is: @ViewBag.Message</p>
+
+    <!--Model: @*(((DateTime)Model).DayOfWeek)*@       
+        Использование слаботипизированного представления (когда представление ничего не знает о модели). 
+        Модель передается из метода действия как объект типа object. 
+        Для получения данных из модели необходимо объект модели явно привести к нужгому типу-->
+    
+    
+    <!--Model: @*Model.DayOfWeek *@        
+        Использование строго типизированного представления-->
+</body>
+</html>

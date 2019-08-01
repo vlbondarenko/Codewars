@@ -1,0 +1,27 @@
+﻿@model string[]
+@{ Layout = "_Layout";}
+
+<!--Объявление секции Header. В компоновке содержится ссылка на эту секцию, благодаря чему содержимое этой секции будет рендериться-->
+@section Header{
+    <div class="btn-success">
+        @foreach (string str in new string[] { "Home", "List", "Edit" })
+        {
+            <a class="btn btn-sm btn-primary" asp-action="str">@str</a>
+        }
+    </div>
+}
+
+<!--Каждая секция должжна иметь ссылку в компоновке, иначе будет ошибка-->
+@section Footer{
+    <div class="bg-success">
+        This is the footer
+    </div>
+}
+
+<!--Эти строчки кода не определены в какой либо секции, эта часть рендеится посредством команды RenderBody()-->
+This is a list of fruits names:
+@foreach (var name in Model)
+{
+    <span><b>@name</b></span>
+}
+

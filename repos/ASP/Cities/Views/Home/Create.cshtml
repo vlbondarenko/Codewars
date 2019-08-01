@@ -1,0 +1,33 @@
+﻿@model City
+@{
+    Layout = "_Layout";
+}
+
+    <form method="post">
+        <div class="form-group">
+            <label helper-for="Name" />
+            <input helper-for="Name" />
+        </div>
+        <div class="form-group">
+            <label helper-for="Country" />
+            <input helper-for="Country" />
+        </div>
+        <div class="form-group">
+            <label helper-for="Population" />
+            <input helper-for="Population" type="number" />
+        </div>
+        <!--<button type="submit" bs-button-color="primary">Add</button>-->
+        <!--Здесь аттрибут class определен и ему присвоено значение, однако при запуске указанный стиль к кнопке не применится,
+        так как к элементу button автоматически применился атрибут bs-button-color без установки значения свойства BsButtonColor,
+        поэтому необходимо сужать область действия таг хелпера-->
+        <!--<button type="reset" class="btn btn-primary">Reset</button>
+        <a bs-button-color="danger" href="/Home/Index">Cancel</a>
+        <formbutton type="submit" bg-color="danger" />
+        <formbutton type="reset" />-->
+
+        <div theme="primary">
+            <button type="submit">Add</button>
+            <button type="reset">Reset</button>
+            <a href="/Home/Index">Cancel</a>
+        </div>
+    </form>

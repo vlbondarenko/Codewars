@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+</head>
+<body class="panel-body">
+    @RenderSection("Header")
+    <div class="bg-info">
+        This is part of the layout
+    </div>
+    @RenderBody()
+    <div class="bg-info">
+        This is part of the layout
+    </div>
+    @if (IsSectionDefined("Footer"))
+    {
+        @RenderSection("Footer")
+    }
+    else
+    {
+        <h4>This is default footer</h4>
+    }
+
+    <!--Еслисекция не определена, то ошибка не выдается, т.к. второй аргумент метода указывает на то,что секция необязательна-->
+    @RenderSection("scripts",false)
+
+    <div class="bg-info">
+        This is a part of layout
+    </div>
+</body>
+</html>

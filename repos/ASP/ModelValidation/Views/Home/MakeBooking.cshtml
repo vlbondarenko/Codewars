@@ -1,0 +1,46 @@
+﻿@model Appointment
+@{
+    Layout = "_Layout";
+}
+
+<!--
+    Данный скрипт заменяет класс input-validation-error в элементе div с целью визуального подчеркивания проблемных полей формы
+    section scripts{
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("input.input-validation-error").closest(".form-group").addClass("alert-danger");
+            });
+        </script>
+    }-->
+
+<!--Проверка достоверности модели на стороне клиента-->
+@section scripts
+{
+    <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/src/jquery.validate.unobtrusive.js"></script>
+}
+
+
+<div class="bg-primary m-1 p-1 text-white"><h2>Book an Oppointment</h2></div>
+
+<form class="m-1 p-1" asp-action="MakeBooking" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="ClientName">Your Name:</label>
+        <div><span asp-validation-for="ClientName" class="text-danger"></span></div>
+        <input asp-for="ClientName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Date">Appointment Date:</label>
+        <div><span class="text-danger" asp-validation-for="Date"></span></div>
+        <input asp-for="Date" type="text" asp-format="{0:d}" class="form-control" />
+    </div>
+    <span asp-validation-for="TermsAccepted" class="text-danger"></span>
+    <div class="custom-radio form-group">
+        <input asp-for="TermsAccepted" />
+        <label asp-for="TermsAccepted" class="form-check-label">I accept the terms & conditions</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Make Booking</button>
+</form>

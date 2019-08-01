@@ -1,0 +1,38 @@
+﻿<!--model string[]      привязка массива-->
+@model IList<string>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Names";
+}
+
+
+<!--Метод действия визуализирующий данное представление (HomeController.Names(string [] names)), принимает в качестве параметра
+    строковый массив. Если массив не содержит элементов, то клиенту отправляется пустая форма для заполнения. При отправке формы на сервер
+    связыватель модели инспектирует элементы формы, видит, что есть три элемента input с атрибутами name="names", то есть значения
+    атрибутов совпадают с названием параметра метода действия, далее связыватель модели группирует значения этих трех
+    элементов в массив и передает этот массив в качестве аргумента в метод действия. В результате, при отправке серверу
+    заполненной формы, ответ придет в виде таблицы с именами, введенными ранее (блок else)-->
+@if (Model.Count == 0)
+{
+    <form asp-action="Names" method="post">
+        @for (int i = 0; i < 3; i++)
+        {
+            <div class="form-group">
+                <label>Name@(i + 1):</label>
+                <input id="names" name="names" class="form-control" />
+            </div>
+        }
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+}
+else
+{
+    <table class="table table-sm table-bordered table-striped">
+        @foreach (string name in Model)
+        {
+            <tr><th>Name:</th><td>@name</td></tr>
+        }
+    </table>
+    <a asp-action="Names" class="btn btn-primary">Back</a>
+}

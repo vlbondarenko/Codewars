@@ -1,57 +1,63 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JohnAndAnn
 {
     public class Johnann
     {
-        public static List<long> John(long n)
+        public static List<int> John(int days)
         {
-            var johnKata = new List<long> { 0 };
-            var annKata = new List<long> { 1 };            
-            for (int i = 1; i < n; i++)
+            //Иициализируем коллекции согласно начальным условиям
+            var johnKata = new List<int> { 0 };
+            var annKata = new List<int> { 1 };
+
+            //Рассчитываем количество ката для каждого дня
+            //Расчет количества ката, решенных другим персонажем, вынесен в отдельный метод
+            for (int n = 1; n < days; n++)
             {
-                var item = i - CalculationNumOfKata((int)johnKata[i - 1], annKata, johnKata);
+                var item = n - KataOfAnotherPerson(johnKata[n - 1], annKata, johnKata);
                 johnKata.Add(item);
             }
 
             return johnKata;
         }
-        public static List<long> Ann(long n)
+        public static List<int> Ann(int days)
         {
-            var annKata = new List<long> { 1 };
-            var johnKata = new List<long> { 0 };
-            for (int i = 1; i < n; i++)
+            var annKata = new List<int> { 1 };
+            var johnKata = new List<int> { 0 };
+            for (int n = 1; n < days; n++)
             {
-                var item = i - CalculationNumOfKata((int)annKata[i - 1], johnKata, annKata);
+                var item = n - KataOfAnotherPerson(annKata[n - 1], johnKata, annKata);
                 annKata.Add(item);
             }
-
             return annKata;
         }
 
-
-
-        public static long SumJohn(long n)
+        //Метод для расчета количества решенных ката другим персонажем.
+        //kataOfFirstPerson - коллекция с данными о решенных ката по дням для того самого "другого персонажа"
+        //kataOfSecondPerson - коллекция с данными о решенных ката по дням для персонажа, для которого ведется расчет в вызывающем методе
+        //day - день, по которому необходимы данные для вызывающего метода
+        private static int KataOfAnotherPerson(int day, IList<int> kataOfFirstPerson, IList<int> kataOfSecondPerson)
         {
-            return John(n).Sum();
-        }
-        public static long SumAnn(long n)
-        {
-            return Ann(n).Sum();
-        }
-
-        public static long CalculationNumOfKata(int day,IList<long> first,IList<long> second)
-        {
-            if (first.Count <= day)
+            //Определяем, есть ли уже в коллекции данные о дне day. Если нет, то вычисляем количество ката для дня day и добавляем в коллекцию
+            //Если данные уже есть, то пропускаем эту часть и просто возвращаем данные по дню day
+            if (kataOfFirstPerson.Count <= day)
             {
-                var item = day - second[(int)first[day - 1]];
-                first.Add(item);
+                var item = day - kataOfSecondPerson[kataOfFirstPerson[day - 1]];
+                kataOfFirstPerson.Add(item);
             }
-            return first[day];
+
+            return kataOfFirstPerson[day];
+        }
+
+        //Вычисление суммарного количества ката, решенных персонажем за days дней
+        public static int SumJohn(int days)
+        {
+            return John(days).Sum();
+        }
+        public static int SumAnn(int days)
+        {
+            return Ann(days).Sum();
         }
     }
 }

@@ -9,15 +9,15 @@ namespace JohnAndAnn
     public static class JohannTests
     {
 
-        private static string Array2String(List<long> list)
+        private static string Array2String(List<int> list)
         {
             return "[" + string.Join(", ", list) + "]";
         }
-        private static void testJohn(long n, string res)
+        private static void testJohn(int n, string res)
         {
             Assert.AreEqual(res, Array2String(Johnann.John(n)));
         }
-        private static void testAnn(long n, string res)
+        private static void testAnn(int n, string res)
         {
             Assert.AreEqual(res, Array2String(Johnann.Ann(n)));
         }
@@ -34,11 +34,11 @@ namespace JohnAndAnn
             testAnn(6, "[1, 1, 2, 2, 3, 3]");
 
         }
-        private static void testSumAnn(long n, long res)
+        private static void testSumAnn(int n, int res)
         {
             Assert.AreEqual(res, Johnann.SumAnn(n));
         }
-        private static void testSumJohn(long n, long res)
+        private static void testSumJohn(int n, int res)
         {
             Assert.AreEqual(res, Johnann.SumJohn(n));
         }

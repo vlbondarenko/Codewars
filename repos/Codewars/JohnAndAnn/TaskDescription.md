@@ -33,9 +33,9 @@ The functions in 1) are not tested in Fortran and not tested in Shell.
 
 * sumJohnAndAnn has two parameters:
 
-first one : n (number of days, $1)
+    * first one : n (number of days, $1)
 
-second one : which($2) ->
+    * second one : which($2) ->
 
 1.   for getting John's sum
 

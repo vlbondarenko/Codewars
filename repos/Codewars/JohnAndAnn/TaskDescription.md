@@ -1,4 +1,4 @@
-##John and Ann sign up for Codewars
+## John and Ann sign up for Codewars
 
 John and his wife Ann have decided to go to Codewars.
 
@@ -16,12 +16,12 @@ t being equal to the number of katas done by John himself at day n - 1.
 
 Whoops! I think they need to lay out a little clearer exactly what there're getting themselves into!
 
-###Could you write:
+### Could you write:
 1. Two functions ann and john (parameter n) giving the list of the numbers of katas Ann and John should take on the first n days (see first examples below)?
 2. The total number of katas taken by ann function sum_ann(n) and john function sum_john(n) - on the first n days?
 The functions in 1) are not tested in Fortran and not tested in Shell.
 
-###Examples:
+### Examples:
         
         john(11) -->  [0, 0, 1, 2, 2, 3, 4, 4, 5, 6, 6]
         ann(6) -->  [1, 1, 2, 2, 3, 3]
@@ -29,7 +29,7 @@ The functions in 1) are not tested in Fortran and not tested in Shell.
         sum_john(75) -->  1720
         sum_ann(150) -->  6930
     
-###Shell Note:
+### Shell Note:
 
 * sumJohnAndAnn has two parameters:
 
@@ -43,5 +43,5 @@ second one : which($2) ->
 
 See "Sample Tests".
 
-###Note:
+### Note:
 Keep an eye on performance.

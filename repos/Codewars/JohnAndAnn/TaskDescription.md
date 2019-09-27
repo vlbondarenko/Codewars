@@ -37,9 +37,9 @@ The functions in 1) are not tested in Fortran and not tested in Shell.
 
     * second one : which($2) ->
 
-1.   for getting John's sum
+        1.   for getting John's sum
 
-2.   for getting Ann's sum.
+        2.   for getting Ann's sum.
 
 See "Sample Tests".
 

@@ -3,6 +3,8 @@
 The walker starts from point O, walks along OA, AB and BC. When he is in C (C will be in the upper half-plane), what is the distance CO? 
 What is the angle tOC in positive degrees, minutes, seconds?
 
+![The walker](repos/Codewars/TheWalker/Picture.png)
+
 Angle tOA is alpha (here 45 degrees), angle hAB is beta (here 30 degrees), angle uBC is gamma(here 60 degrees).
 Explanatory picture is in the root project
 

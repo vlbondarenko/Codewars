@@ -14,7 +14,7 @@ For better understanding, please follow the numbers of the next array consecutiv
      snail(array) #=> [1,2,3,4,5,6,7,8,9]
 
 This image will illustrate things more clearly:
-![Snail](url)
+![Snail](repos/Codewars/Snail/snail.png)
 
 NOTE: The idea is not sort the elements from the lowest value to the highest; the idea is to traverse the 2-d array in a clockwise snailshell pattern.
 

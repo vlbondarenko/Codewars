@@ -33,5 +33,6 @@ Function solve(a, b, c, alpha, beta, gamma) with parameters:
     - seconds = 18.518...
 *  hence [15, 135, 49, 18]
 
-Note
+### Note
+
 If you need the constant pi you can use pi = 3.14159265358979323846

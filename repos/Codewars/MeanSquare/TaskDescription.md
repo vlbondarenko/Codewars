@@ -1,6 +1,6 @@
 ## Mean Square Error
 
-Complete the function that
+Complete the function that:
 
     * accepts two arrays of equal length
     * compares the value each member in one array to the corresponding member in the other

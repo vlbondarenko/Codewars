@@ -26,6 +26,8 @@ namespace ASCIIEncodingAndDecoding
 
             Console.WriteLine();
 
+
+
             Console.ReadLine();
         }
     }

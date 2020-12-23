@@ -24,6 +24,7 @@ namespace ASCIIEncodingAndDecoding
             Console.WriteLine(str1 + "\n");
             Console.WriteLine(str.Equals(str1.ToASCII85()) + "\n");
 
+            Console.WriteLine();
 
             Console.ReadLine();
         }

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Calculator;
+using System.Collections.Generic;
 
 namespace Calculator.Tests
 {
@@ -34,6 +35,16 @@ namespace Calculator.Tests
         public double TestEvaluation(string expression)
         {
             return Evaluator.Evaluate(expression);
+        }
+
+
+        [Test]
+        [TestCase("1.25 - -(-(-(-4)))", ExpectedResult = new string[] { "1.25", "-", "-", "(", "-", "(", "-", "(", "-", "4", ")", ")", ")" })]
+        [TestCase("1 - -(-(-(-4)))", ExpectedResult = new string[] { "1", "-", "-", "(", "-", "(", "-", "(", "-", "4", ")", ")", ")" })]
+        [TestCase("123.45*(678.90 / (-2.5+ 11.5)-(80 -19) *33.25) / 20 + 11", ExpectedResult = new string[] { "123.45", "*", "(", "678.90", "/", "(", "-", "2.5", "+", "11.5", ")", "-", "(", "80", "-", "19", ")", "*", "33.25", ")", "/", "20", "+", "11" })]
+        public IEnumerable<string> TestSpliting(string expression)
+        {
+            return Evaluator.SplitExpressionIntoLexemås(expression);
         }
     }
 }

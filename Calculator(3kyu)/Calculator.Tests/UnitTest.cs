@@ -14,7 +14,7 @@ namespace Calculator.Tests
 
 
         [Test]
-        /*[TestCase("1-1", ExpectedResult = 0)]
+        [TestCase("1-1", ExpectedResult = 0)]
         [TestCase("1+1", ExpectedResult = 2)]
         [TestCase("1 - 1", ExpectedResult = 0)]
         [TestCase("1* 1", ExpectedResult = 1)]
@@ -36,10 +36,10 @@ namespace Calculator.Tests
         [TestCase("2 / (2 + 3) * 4.33 - -6", ExpectedResult = 7.7320000000000002d)]
         [TestCase("2 / (2 + 3) * 4.33 + 6", ExpectedResult = 7.7320000000000002d)]
         [TestCase("((2.33 / (2.9+3.5)*4) - -6)", ExpectedResult = 7.4562499999999998d)]
-        [TestCase("123.45*(678.90 / (-2.5+ 11.5)-(80 -19) *33.25) / 20 + 11", ExpectedResult = -12042.760875d)]*/
+        [TestCase("123.45*(678.90 / (-2.5+ 11.5)-(80 -19) *33.25) / 20 + 11", ExpectedResult = -12042.760875d)]
         [TestCase("2*(-(-1))+3-(-4)", ExpectedResult = 9)]
-       /* [TestCase("((2.33 / (2.9+3.5)*4)+6)", ExpectedResult = 7.4562499999999998d)]
-        [TestCase("123/-(-5 + 2)", ExpectedResult = 41)]*/
+        [TestCase("((2.33 / (2.9+3.5)*4)+6)", ExpectedResult = 7.4562499999999998d)]
+        [TestCase("123/-(-5 + 2)", ExpectedResult = 41)]
         public double TestEvaluation(string expression)
         { 
             return Evaluator.Evaluate(expression);

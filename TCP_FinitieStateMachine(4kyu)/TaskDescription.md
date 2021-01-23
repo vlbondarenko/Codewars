@@ -39,7 +39,7 @@ Action of each event upon each state:
     CLOSE_WAIT: APP_CLOSE    -> LAST_ACK
     LAST_ACK: RCV_ACK        -> CLOSED
 
-![EFSM_TCP](Codewars\TCP_FinitieStateMachine (4 kyu)\EFSM_TCP.png)
+![EFSM_TCP](Codewars\TCP_FinitieStateMachine(4kyu)\EFSM_TCP.png)
 
 ### Examples
 

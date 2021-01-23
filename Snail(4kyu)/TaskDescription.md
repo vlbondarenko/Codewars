@@ -15,7 +15,7 @@ For better understanding, please follow the numbers of the next array consecutiv
 
 This image will illustrate things more clearly:
 
-![Snail](repos/Codewars/Snail/snail.png)
+![Snail](repos/Codewars/Snail(4kyu)/snail.png)
 
 NOTE: The idea is not sort the elements from the lowest value to the highest; the idea is to traverse the 2-d array in a clockwise snailshell pattern.
 
